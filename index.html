@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hōshi 星 — Restaurant japonais à Lyon · Omakase & Izakaya</title>
+<meta name="description" content="Hōshi, restaurant japonais à Lyon : omakase au comptoir de hinoki, izakaya de la Croix-Rousse, sakés rares. Réservez votre soirée.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        sumi: '#0d0b0a',
+        charbon: '#171413',
+        washi: '#f1ebdf',
+        kinari: '#e4dac7',
+        aka: '#d7261e',
+        kin: '#c9a45c',
+        rouille: '#7a1d14'
+      },
+      fontFamily: {
+        mincho: ['"Shippori Mincho"', 'serif'],
+        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+        ital: ['Fraunces', 'serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{background:#0d0b0a;color:#f1ebdf;font-family:'Zen Kaku Gothic New',sans-serif;overflow-x:hidden}
+::selection{background:#d7261e;color:#f1ebdf}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.ulink{position:relative}
+.ulink::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .6s cubic-bezier(0.16,1,0.3,1)}
+.ulink:hover::after{transform:scaleX(1);transform-origin:left}
+.vert{writing-mode:vertical-rl}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 mix-blend-difference text-washi">
+<style>
+@keyframes navin{from{opacity:0;transform:translateY(-1.5rem)}to{opacity:1;transform:none}}
+.navin{animation:navin 1.2s cubic-bezier(0.16,1,0.3,1) .2s both}
+</style>
+<div class="navin flex items-center justify-between px-5 md:px-10 py-5">
+<a href="#top" class="flex items-baseline gap-3"><span class="font-mincho text-2xl font-extrabold tracking-tight">星</span><span class="font-mincho text-lg tracking-[0.3em] uppercase">Hōshi</span></a>
+<nav class="hidden md:flex items-center gap-9 text-[13px] tracking-[0.18em] uppercase">
+<a href="#concept" class="ulink">Concept</a>
+<a href="#comptoir" class="ulink">Omakase</a>
+<a href="#carte" class="ulink">La carte</a>
+<a href="#sake" class="ulink">Saké</a>
+<a href="#lieu" class="ulink">Le lieu</a>
+</nav>
+<a href="#reservation" class="text-[13px] tracking-[0.18em] uppercase border border-current rounded-full px-5 py-2.5 hover:bg-washi hover:text-sumi transition-colors duration-500">Réserver</a>
+</div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="relative min-h-[100svh] overflow-hidden flex items-end bg-sumi">
+<style>
+@keyframes heroimg{from{clip-path:inset(0 0 100% 0);transform:scale(1.25)}to{clip-path:inset(0 0 0 0);transform:scale(1)}}
+@keyframes sunrise{from{transform:translateY(40%) scale(.7);opacity:0}to{transform:none;opacity:1}}
+@keyframes lineup{from{transform:translateY(110%)}to{transform:none}}
+@keyframes fadeup{from{opacity:0;transform:translateY(2rem)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(2%,-3%,0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.h-img{animation:heroimg 1.9s cubic-bezier(0.16,1,0.3,1) .1s both}
+.h-sun{animation:sunrise 2.2s cubic-bezier(0.16,1,0.3,1) .6s both}
+.h-line span{display:inline-block;animation:lineup 1.3s cubic-bezier(0.16,1,0.3,1) both}
+.h-line.l1 span{animation-delay:.8s}.h-line.l2 span{animation-delay:.95s}
+.h-fade{animation:fadeup 1.2s cubic-bezier(0.16,1,0.3,1) 1.4s both}
+.h-drift{animation:drift 14s ease-in-out infinite}
+.h-spin{animation:spin 24s linear infinite}
+@media (prefers-reduced-motion: no-preference){@supports (animation-timeline: scroll()){
+@keyframes heroscroll{to{transform:translateY(12vh) scale(1.08)}}
+.h-par{animation:heroscroll linear both;animation-timeline:scroll(root);animation-range:0 100vh}
+}}
+</style>
+<div class="absolute inset-0 h-img h-par">
+<img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=2000&q=80" alt="Nigiris de poisson cru disposés sur une planche en bois, éclairage tamisé" class="w-full h-full object-cover opacity-55">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-sumi via-sumi/40 to-sumi/70"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_20%,rgba(215,38,30,.35),transparent_55%)] h-drift"></div>
+
+<!-- red sun -->
+<div class="h-sun absolute right-[-12vw] md:right-[6vw] top-[14vh] w-[62vw] h-[62vw] md:w-[30vw] md:h-[30vw] rounded-full bg-aka shadow-[0_0_160px_40px_rgba(215,38,30,.45)] mix-blend-screen opacity-90"></div>
+
+<div class="absolute right-5 md:right-10 top-1/2 -translate-y-1/2 vert font-mincho text-sm tracking-[0.6em] text-washi/70 h-fade hidden sm:block">里 ヨン · 火と水と刃</div>
+
+<div class="relative z-10 w-full px-5 md:px-10 pb-10 md:pb-14">
+<p class="h-fade font-ital italic text-kin text-lg md:text-2xl mb-4">Lyon · Croix-Rousse · depuis 2019</p>
+<h1 class="font-mincho font-extrabold leading-[0.82] tracking-[-0.04em] text-[clamp(5rem,23vw,22rem)] -ml-1">
+<span class="h-line l1 block overflow-hidden pb-[0.08em]"><span>Hōshi</span></span>
+<span class="h-line l2 block overflow-hidden pb-[0.08em]"><span class="text-aka">星</span><span class="font-ital italic font-light text-[0.32em] tracking-normal text-washi ml-4 align-middle">l'étoile du comptoir</span></span>
+</h1>
+<div class="h-fade mt-8 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<p class="max-w-md text-washi/80 text-base md:text-lg leading-relaxed">Quatorze places autour d'un comptoir de hinoki. Un chef, un couteau, le poisson du matin — et Lyon qui s'efface derrière le noren.</p>
+<div class="flex items-center gap-6">
+<a href="#reservation" class="group relative inline-flex items-center gap-3 bg-aka text-washi px-8 py-4 rounded-full overflow-hidden text-sm tracking-[0.2em] uppercase hover:shadow-[0_10px_50px_-8px_rgba(215,38,30,.8)] transition-shadow duration-500">
+<span class="relative z-10">Réserver une table</span><i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1.5 transition-transform duration-500"></i>
+<span class="absolute inset-0 bg-washi translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></span>
+</a>
+<a href="#carte" class="ulink text-sm tracking-[0.2em] uppercase">Voir la carte</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<section class="bg-aka text-washi overflow-hidden py-5 border-y border-sumi">
+<style>
+@keyframes marq{to{transform:translateX(-50%)}}
+.marq{animation:marq 38s linear infinite;width:max-content}
+.marq:hover{animation-play-state:paused}
+</style>
+<div class="marq flex whitespace-nowrap font-mincho text-3xl md:text-5xl font-bold tracking-tight">
+<span class="px-6">鮨 Sushi</span><span class="px-6 text-sumi">✦</span><span class="px-6">焼き鳥 Yakitori</span><span class="px-6 text-sumi">✦</span><span class="px-6">酒 Saké</span><span class="px-6 text-sumi">✦</span><span class="px-6">炉端 Robata</span><span class="px-6 text-sumi">✦</span><span class="px-6">出汁 Dashi</span><span class="px-6 text-sumi">✦</span><span class="px-6">お任せ Omakase</span><span class="px-6 text-sumi">✦</span>
+<span class="px-6">鮨 Sushi</span><span class="px-6 text-sumi">✦</span><span class="px-6">焼き鳥 Yakitori</span><span class="px-6 text-sumi">✦</span><span class="px-6">酒 Saké</span><span class="px-6 text-sumi">✦</span><span class="px-6">炉端 Robata</span><span class="px-6 text-sumi">✦</span><span class="px-6">出汁 Dashi</span><span class="px-6 text-sumi">✦</span><span class="px-6">お任せ Omakase</span><span class="px-6 text-sumi">✦</span>
+</div>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept" class="relative bg-washi text-sumi py-28 md:py-44 px-5 md:px-10 overflow-hidden">
+<style>@media (prefers-reduced-motion: no-preference) { @supports (animation-timeline: view()) { .reveal { animation: reveal both cubic-bezier(0.16, 1, 0.3, 1); animation-timeline: view(); animation-range: entry 0% entry 90%; } } } @keyframes reveal { from { opacity: 0; transform: translateY(3rem) scale(0.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference){@supports (animation-timeline: view()){
+@keyframes par1{from{transform:translateY(8vh)}to{transform:translateY(-8vh)}}
+@keyframes par2{from{transform:translateY(-6vh)}to{transform:translateY(10vh)}}
+.par1{animation:par1 linear both;animation-timeline:view();animation-range:cover}
+.par2{animation:par2 linear both;animation-timeline:view();animation-range:cover}
+@keyframes unclip{from{clip-path:inset(12% 12% 12% 12%)}to{clip-path:inset(0)}}
+.unclip{animation:unclip linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+}}
+</style>
+<div class="absolute -right-10 top-10 font-mincho font-extrabold text-[40vw] leading-none text-sumi/[0.04] select-none pointer-events-none">星</div>
+<div class="relative max-w-7xl mx-auto grid md:grid-cols-12 gap-10 md:gap-6">
+<div class="md:col-span-7 md:pt-10">
+<p class="reveal text-aka text-xs tracking-[0.35em] uppercase mb-6">01 — Le concept</p>
+<h2 class="reveal font-mincho font-extrabold tracking-[-0.035em] leading-[0.95] text-[clamp(2.6rem,7vw,7rem)]">Le Japon se mange <span class="font-ital italic font-light text-aka">lentement</span>, au bord d'un comptoir.</h2>
+<div class="grid sm:grid-cols-2 gap-8 mt-12 md:mt-16 max-w-2xl">
+<p class="reveal text-lg leading-relaxed text-sumi/80">Hōshi naît d'un voyage de dix ans entre Osaka, Kanazawa et Lyon. Le chef Kenji Arakawa y a appris que la cuisine japonaise n'est pas une collection de plats : c'est une conversation entre un geste et un produit.</p>
+<p class="reveal text-lg leading-relaxed text-sumi/80">Chaque matin, le poisson arrive de Bretagne et de Méditerranée, le riz de Yamagata, les légumes des maraîchers de la Dombes. Rien n'est caché : vous voyez le couteau, le feu, la fumée.</p>
+</div>
+<div class="reveal mt-12 flex gap-10 md:gap-16">
+<div><p class="font-mincho font-extrabold text-6xl text-aka">14</p><p class="text-xs tracking-[0.2em] uppercase mt-1">places au comptoir</p></div>
+<div><p class="font-mincho font-extrabold text-6xl text-aka">6h</p><p class="text-xs tracking-[0.2em] uppercase mt-1">arrivage du poisson</p></div>
+<div><p class="font-mincho font-extrabold text-6xl text-aka">47</p><p class="text-xs tracking-[0.2em] uppercase mt-1">sakés en cave</p></div>
+</div>
+</div>
+<div class="md:col-span-5 relative min-h-[520px] md:min-h-[680px]">
+<div class="par1 absolute right-0 top-0 w-[72%] aspect-[3/4] rounded-t-full overflow-hidden">
+<img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=80" alt="Chef sushi découpant un poisson frais au couteau" class="unclip w-full h-full object-cover hover:scale-105 transition-transform duration-[1.4s]">
+</div>
+<div class="par2 absolute left-0 bottom-0 w-[52%] aspect-square rounded-full overflow-hidden border-[10px] border-washi shadow-2xl shadow-sumi/30">
+<img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=700&q=80" alt="Assortiment de sushis et sashimis élégamment dressés" class="w-full h-full object-cover hover:scale-110 transition-transform duration-[1.4s]">
+</div>
+</div>
+</div>
+</section>
+
+<!-- COMPTOIR : sticky storytelling -->
+<section id="comptoir" class="relative bg-sumi">
+<style>
+.step-card{transition:transform .8s cubic-bezier(0.16,1,0.3,1),border-color .5s}
+.step-card:hover{transform:translateX(12px);border-color:#d7261e}
+@media (prefers-reduced-motion: no-preference){@supports (animation-timeline: view()){
+@keyframes fillbar{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.fillbar{transform-origin:top;animation:fillbar linear both;animation-timeline:view();animation-range:entry 20% exit 40%}
+}}
+</style>
+<div class="max-w-7xl mx-auto px-5 md:px-10 grid md:grid-cols-2 gap-10 md:gap-20">
+<div class="md:sticky md:top-0 md:h-screen flex flex-col justify-center py-20 md:py-0">
+<p class="reveal text-kin text-xs tracking-[0.35em] uppercase mb-6">02 — Le comptoir Omakase</p>
+<h2 class="reveal font-mincho font-extrabold tracking-[-0.035em] leading-[0.92] text-[clamp(2.8rem,7vw,7rem)]">お任せ<br><span class="font-ital italic font-light text-aka text-[0.55em]">« je vous fais confiance »</span></h2>
+<p class="reveal mt-8 text-washi/75 text-lg max-w-md leading-relaxed">Vingt services, deux heures, aucune carte. Le chef lit votre soirée et compose la suite. Deux services par soir : 19h et 21h30.</p>
+<div class="reveal mt-10 relative aspect-[16/10] w-full max-w-md overflow-hidden rounded-sm">
+<img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=1000&q=80" alt="Sushi nigiri au thon posé sur une planche, vu de près" class="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.4s]">
+<div class="absolute bottom-3 left-3 bg-aka text-washi text-xs tracking-[0.2em] uppercase px-3 py-1.5">Menu 148 €</div>
+</div>
+</div>
+<div class="relative py-10 md:py-[22vh] md:pl-10">
+<div class="hidden md:block absolute left-0 top-[22vh] bottom-[22vh] w-px bg-washi/15"><div class="fillbar absolute inset-0 bg-aka"></div></div>
+<div class="space-y-8 md:space-y-[18vh]">
+<article class="step-card reveal border-l md:border-l-0 md:border border-washi/15 bg-charbon p-8 md:p-10">
+<p class="font-ital italic text-kin text-lg">I · Zensai</p>
+<h3 class="font-mincho font-bold text-3xl md:text-4xl mt-2">前菜 — L'ouverture</h3>
+<p class="mt-4 text-washi/70 leading-relaxed">Trois bouchées froides et chaudes : chawanmushi à l'oursin, tofu maison au sésame noir, maquereau saisi au charbon de bois.</p>
+</article>
+<article class="step-card reveal border-l md:border-l-0 md:border border-washi/15 bg-charbon p-8 md:p-10">
+<p class="font-ital italic text-kin text-lg">II · Sashimi</p>
+<h3 class="font-mincho font-bold text-3xl md:text-4xl mt-2">刺身 — La lame</h3>
+<p class="mt-4 text-washi/70 leading-relaxed">Saint-pierre maturé sept jours, daurade royale, noix de Saint-Jacques de Normandie. Wasabi frais râpé sur peau de requin, à la minute.</p>
+</article>
+<article class="step-card reveal border-l md:border-l-0 md:border border-washi/15 bg-charbon p-8 md:p-10">
+<p class="font-ital italic text-kin text-lg">III · Nigiri</p>
+<h3 class="font-mincho font-bold text-3xl md:text-4xl mt-2">握り — Douze gestes</h3>
+<p class="mt-4 text-washi/70 leading-relaxed">Riz vinaigré rouge à température du corps, thon rouge de la Méditerranée, anguille laquée, oursin de Bretagne. Servis un par un, à manger aux doigts.</p>
+</article>
+<article class="step-card reveal border-l md:border-l-0 md:border border-washi/15 bg-charbon p-8 md:p-10">
+<p class="font-ital italic text-kin text-lg">IV · Shime</p>
+<h3 class="font-mincho font-bold text-3xl md:text-4xl mt-2">〆 — La clôture</h3>
+<p class="mt-4 text-washi/70 leading-relaxed">Miso de trois ans, tamago encore tiède, puis un sorbet yuzu-gingembre et un thé gyokuro infusé à 50 degrés.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CARTE : horizontal track -->
+<section id="carte" class="relative bg-kinari text-sumi">
+<style>
+.hscroll-wrap{height:auto}
+.htrack{display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1.25rem 2rem;scrollbar-width:thin;scrollbar-color:#d7261e transparent}
+.hcard{flex:0 0 min(82vw,380px);scroll-snap-align:center;transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
+.hcard:hover{transform:translateY(-14px) rotate(-1deg)}
+.hcard .pic{overflow:hidden}
+.hcard img{transition:transform 1.4s cubic-bezier(0.16,1,0.3,1)}
+.hcard:hover img{transform:scale(1.12)}
+@media (min-width:1024px){
+ .hscroll-wrap{height:400vh}
+ .hstick{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+ .htrack{overflow:visible;padding:0 5vw;width:max-content;scroll-snap-type:none}
+ .hcard{flex-basis:30vw;max-width:440px}
+}
+@media (min-width:1024px) and (prefers-reduced-motion: no-preference){@supports (animation-timeline: view()){
+ @keyframes hmove{from{transform:translateX(0)}to{transform:translateX(calc(-100% + 100vw))}}
+ .htrack{animation:hmove linear both;animation-timeline:view();animation-range:contain 0% contain 100%}
+ .hscroll-wrap{view-timeline-name:--h}
+}}
+@media (min-width:1024px){@supports not (animation-timeline: view()){
+ .hscroll-wrap{height:auto}.hstick{position:static;height:auto;padding:6rem 0}.htrack{overflow-x:auto;width:auto;padding:0 5vw 2rem}.hcard{flex-basis:380px}
+}}
+</style>
+<div class="hscroll-wrap">
+<div class="hstick py-20 lg:py-0">
+<div class="px-5 md:px-10 mb-10 lg:mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<p class="text-aka text-xs tracking-[0.35em] uppercase mb-5">03 — La carte de l'izakaya</p>
+<h2 class="font-mincho font-extrabold tracking-[-0.035em] leading-[0.92] text-[clamp(2.8rem,8vw,8rem)]">Petits plats,<br><span class="font-ital italic font-light text-aka">grandes envies</span></h2>
+</div>
+<p class="max-w-xs text-sumi/70 leading-relaxed">À partager, à picorer, à accompagner d'un verre. Faites glisser — la carte change au fil des saisons.</p>
+</div>
+<div class="htrack">
+<article class="hcard bg-washi p-4 pb-7 shadow-xl shadow-sumi/10">
+<div class="pic aspect-[4/5]"><img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=800&q=80" alt="Plateau de makis et nigiris variés" class="w-full h-full object-cover"></div>
+<div class="flex justify-between items-baseline mt-5"><h3 class="font-mincho font-bold text-2xl">Moriawase</h3><span class="font-mincho font-bold text-aka text-xl">38 €</span></div>
+<p class="text-sm text-sumi/70 mt-2 leading-relaxed">Huit nigiris et six makis de la pêche du jour, gari maison, soja fumé.</p>
+</article>
+<article class="hcard bg-washi p-4 pb-7 shadow-xl shadow-sumi/10 lg:mt-16">
+<div class="pic aspect-[4/5]"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="Bol de ramen fumant avec œuf mollet et ciboule" class="w-full h-full object-cover"></div>
+<div class="flex justify-between items-baseline mt-5"><h3 class="font-mincho font-bold text-2xl">Shoyu Ramen</h3><span class="font-mincho font-bold text-aka text-xl">19 €</span></div>
+<p class="text-sm text-sumi/70 mt-2 leading-relaxed">Bouillon de poulet de Bresse infusé 14 h, chashu, œuf mariné, nouilles faites ici.</p>
+</article>
+<article class="hcard bg-washi p-4 pb-7 shadow-xl shadow-sumi/10">
+<div class="pic aspect-[4/5]"><img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=800&q=80" alt="Brochettes de yakitori grillées au charbon" class="w-full h-full object-cover"></div>
+<div class="flex justify-between items-baseline mt-5"><h3 class="font-mincho font-bold text-2xl">Yakitori Binchotan</h3><span class="font-mincho font-bold text-aka text-xl">16 €</span></div>
+<p class="text-sm text-sumi/70 mt-2 leading-relaxed">Quatre brochettes grillées sur charbon blanc : cuisse, négi, foie, peau croustillante.</p>
+</article>
+<article class="hcard bg-washi p-4 pb-7 shadow-xl shadow-sumi/10 lg:mt-16">
+<div class="pic aspect-[4/5]"><img src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&q=80" alt="Sashimi de saumon finement tranché et dressé" class="w-full h-full object-cover"></div>
+<div class="flex justify-between items-baseline mt-5"><h3 class="font-mincho font-bold text-2xl">Sashimi du jour</h3><span class="font-mincho font-bold text-aka text-xl">24 €</span></div>
+<p class="text-sm text-sumi/70 mt-2 leading-relaxed">Cinq tranches épaisses, daikon en fils, shiso, ponzu au yuzu.</p>
+</article>
+<article class="hcard bg-washi p-4 pb-7 shadow-xl shadow-sumi/10">
+<div class="pic aspect-[4/5]"><img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&w=800&q=80" alt="Gyozas dorés servis dans une assiette" class="w-full h-full object-cover"></div>
+<div class="flex justify-between items-baseline mt-5"><h3 class="font-mincho font-bold text-2xl">Gyoza croustillants</h3><span class="font-mincho font-bold text-aka text-xl">11 €</span></div>
+<p class="text-sm text-sumi/70 mt-2 leading-relaxed">Porc fermier et chou, dentelle de farine, huile pimentée de la maison.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SAKE -->
+<section id="sake" class="relative bg-charbon py-28 md:py-44 px-5 md:px-10 overflow-hidden">
+<style>
+.sake-row{transition:padding .7s cubic-bezier(0.16,1,0.3,1),background .5s,color .5s}
+.sake-row:hover{padding-left:1.5rem;padding-right:1.5rem;background:#d7261e}
+.sake-row:hover .sk-sub{color:#f1ebdf}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(2deg)}}
+.bob{animation:bob 9s ease-in-out infinite}
+</style>
+<div class="absolute -left-40 top-20 w-[600px] h-[600px] rounded-full bg-rouille/30 blur-[120px]"></div>
+<div class="relative max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 relative">
+<div class="bob relative aspect-[3/4] max-w-sm mx-auto overflow-hidden rounded-t-[999px] reveal">
+<img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&fit=crop&w=900&q=80" alt="Verres et carafe de saké servis sur une table en bois sombre" class="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.4s]">
+<div class="absolute inset-0 bg-gradient-to-t from-sumi/70 to-transparent"></div>
+</div>
+<p class="vert absolute -right-2 sm:right-6 top-10 font-mincho text-4xl font-bold text-kin/80 tracking-widest">日本酒</p>
+</div>
+<div class="lg:col-span-7">
+<p class="reveal text-kin text-xs tracking-[0.35em] uppercase mb-6">04 — La cave à saké</p>
+<h2 class="reveal font-mincho font-extrabold tracking-[-0.035em] leading-[0.92] text-[clamp(2.8rem,7vw,7rem)] mb-10">Quarante-sept<br><span class="font-ital italic font-light text-aka">préfectures</span>, une cave.</h2>
+<ul class="reveal divide-y divide-washi/15 border-y border-washi/15">
+<li class="sake-row flex justify-between items-center gap-4 py-5 cursor-pointer"><div><p class="font-mincho font-bold text-xl md:text-2xl">Dassai 23 — Yamaguchi</p><p class="sk-sub text-sm text-washi/55 mt-1">Junmai daiginjo · soyeux, poire, fleur blanche</p></div><span class="font-mincho text-lg whitespace-nowrap">14 € / verre</span></li>
+<li class="sake-row flex justify-between items-center gap-4 py-5 cursor-pointer"><div><p class="font-mincho font-bold text-xl md:text-2xl">Kokuryu Ryu — Fukui</p><p class="sk-sub text-sm text-washi/55 mt-1">Daiginjo · droit, minéral, finale longue</p></div><span class="font-mincho text-lg whitespace-nowrap">17 € / verre</span></li>
+<li class="sake-row flex justify-between items-center gap-4 py-5 cursor-pointer"><div><p class="font-mincho font-bold text-xl md:text-2xl">Kikusui Funaguchi — Niigata</p><p class="sk-sub text-sm text-washi/55 mt-1">Nama genshu · puissant, fruité, non pasteurisé</p></div><span class="font-mincho text-lg whitespace-nowrap">11 € / verre</span></li>
+<li class="sake-row flex justify-between items-center gap-4 py-5 cursor-pointer"><div><p class="font-mincho font-bold text-xl md:text-2xl">Hakkaisan Yukimuro — Niigata</p><p class="sk-sub text-sm text-washi/55 mt-1">Vieilli trois ans sous la neige · rond, noisette</p></div><span class="font-mincho text-lg whitespace-nowrap">19 € / verre</span></li>
+<li class="sake-row flex justify-between items-center gap-4 py-5 cursor-pointer"><div><p class="font-mincho font-bold text-xl md:text-2xl">Umeshu maison — Rhône</p><p class="sk-sub text-sm text-washi/55 mt-1">Prunes japonaises macérées un an · doux, amande</p></div><span class="font-mincho text-lg whitespace-nowrap">9 € / verre</span></li>
+</ul>
+<p class="reveal mt-8 text-washi/65 max-w-lg leading-relaxed">Notre sommelière Mei vous guide : accords à l'aveugle, flights de trois sakés à 24 €, et toujours un verre découverte offert si vous hésitez.</p>
+</div>
+</div>
+</section>
+
+<!-- GALERIE bento -->
+<section class="bg-washi text-sumi py-24 md:py-40 px-5 md:px-10">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+<div>
+<p class="reveal text-aka text-xs tracking-[0.35em] uppercase mb-5">05 — Instants</p>
+<h2 class="reveal font-mincho font-extrabold tracking-[-0.035em] leading-[0.92] text-[clamp(2.8rem,8vw,8rem)]">Le feu, l'eau, <span class="font-ital italic font-light text-aka">la lame</span></h2>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-3 gap-3 md:gap-4 md:h-[820px]">
+<div class="reveal group col-span-2 md:row-span-2 overflow-hidden relative min-h-[260px]"><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1200&q=80" alt="Mains du chef préparant un sushi" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.6s] ease-[cubic-bezier(0.16,1,0.3,1)]"><span class="absolute bottom-4 left-4 bg-sumi text-washi text-xs tracking-[0.2em] uppercase px-3 py-1.5">Le geste</span></div>
+<div class="reveal group overflow-hidden relative aspect-square md:aspect-auto"><img src="https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&fit=crop&w=700&q=80" alt="Rouleaux de maki dressés sur assiette noire" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.6s]"></div>
+<div class="reveal group overflow-hidden relative aspect-square md:aspect-auto"><img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&w=700&q=80" alt="Gyozas dorés vapeur" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.6s]"></div>
+<div class="reveal group md:row-span-2 overflow-hidden relative min-h-[240px]"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="Ramen fumant garni d'œuf et de nori" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.6s]"></div>
+<div class="reveal bg-aka text-washi p-6 flex flex-col justify-between aspect-square md:aspect-auto"><i class="fa-solid fa-fire text-3xl"></i><p class="font-mincho font-bold text-xl md:text-2xl leading-tight">Charbon binchotan, 1000 °C de patience.</p></div>
+<div class="reveal group col-span-2 overflow-hidden relative min-h-[200px]"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1200&q=80" alt="Nigiris variés alignés sur une planche" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.6s]"><span class="absolute bottom-4 left-4 bg-sumi text-washi text-xs tracking-[0.2em] uppercase px-3 py-1.5">La planche</span></div>
+</div>
+</div>
+</section>
+
+<!-- LE LIEU -->
+<section id="lieu" class="relative bg-sumi">
+<style>
+@media (prefers-reduced-motion: no-preference){@supports (animation-timeline: view()){
+@keyframes bigzoom{from{transform:scale(1.35)}to{transform:scale(1)}}
+.bigzoom{animation:bigzoom linear both;animation-timeline:view();animation-range:entry 0% cover 60%}
+@keyframes textfill{from{background-size:0% 100%}to{background-size:100% 100%}}
+.textfill{animation:textfill linear both;animation-timeline:view();animation-range:entry 30% cover 55%}
+}}
+.textfill{background:linear-gradient(#f1ebdf,#f1ebdf) no-repeat left/100% 100%,transparent;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;position:relative}
+</style>
+<div class="relative h-[80vh] md:h-[100vh] overflow-hidden">
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=80" alt="Salle de restaurant intime aux lumières chaudes" class="bigzoom absolute inset-0 w-full h-full object-cover">
+<div class="absolute inset-0 bg-sumi/60"></div>
+<div class="absolute inset-0 flex flex-col justify-end px-5 md:px-10 pb-14 md:pb-20">
+<p class="text-kin text-xs tracking-[0.35em] uppercase mb-5">06 — Le lieu</p>
+<h2 class="font-mincho font-extrabold tracking-[-0.035em] leading-[0.95] text-[clamp(2.6rem,8vw,8rem)] max-w-5xl">Une ancienne maison de canuts, <span class="font-ital italic font-light text-aka">reconstruite à Kyoto</span>.</h2>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-5 md:px-10 py-24 md:py-36 grid md:grid-cols-3 gap-10">
+<div class="reveal"><i class="fa-solid fa-tree text-aka text-2xl mb-5 block"></i><h3 class="font-mincho font-bold text-2xl mb-3">Hinoki & pierre</h3><p class="text-washi/70 leading-relaxed">Le comptoir est taillé dans un seul cyprès japonais. Il embaume l'air chaque soir, comme un bain de forêt.</p></div>
+<div class="reveal"><i class="fa-solid fa-lightbulb text-aka text-2xl mb-5 block"></i><h3 class="font-mincho font-bold text-2xl mb-3">Lumière de papier</h3><p class="text-washi/70 leading-relaxed">Des lanternes washi tamisent la salle. Les murs de la Croix-Rousse gardent leurs briques, le zen fait le reste.</p></div>
+<div class="reveal"><i class="fa-solid fa-leaf text-aka text-2xl mb-5 block"></i><h3 class="font-mincho font-bold text-2xl mb-3">Jardin de mousse</h3><p class="text-washi/70 leading-relaxed">Une terrasse cachée dans la cour, six tables autour d'un érable. Ouverte dès les beaux jours, pour l'apéritif.</p></div>
+</div>
+</section>
+
+<!-- AVIS -->
+<section class="bg-aka text-washi py-24 md:py-36 px-5 md:px-10 overflow-hidden relative">
+<style>
+.quote{transition:transform .8s cubic-bezier(0.16,1,0.3,1),background .5s}
+.quote:hover{transform:translateY(-10px);background:rgba(13,11,10,.85)}
+</style>
+<div class="absolute -right-10 -top-24 font-mincho font-extrabold text-[45vw] text-sumi/10 leading-none select-none pointer-events-none">声</div>
+<div class="relative max-w-7xl mx-auto">
+<p class="reveal text-xs tracking-[0.35em] uppercase mb-5 text-washi/80">07 — Ils ont dit</p>
+<h2 class="reveal font-mincho font-extrabold tracking-[-0.035em] leading-[0.92] text-[clamp(2.8rem,7vw,7rem)] mb-14">Lyon <span class="font-ital italic font-light">en parle</span></h2>
+<div class="grid md:grid-cols-3 gap-5">
+<figure class="quote reveal bg-sumi/60 backdrop-blur p-8"><div class="text-kin mb-5 text-sm tracking-widest"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div><blockquote class="font-mincho text-xl leading-snug">« Le meilleur nigiri de ma vie, et j'ai vécu cinq ans à Tokyo. Le riz, la température, tout est juste. »</blockquote><figcaption class="mt-6 text-xs tracking-[0.2em] uppercase text-washi/70">Camille D. — Lyon 6e</figcaption></figure>
+<figure class="quote reveal bg-sumi/60 backdrop-blur p-8 md:mt-10"><div class="text-kin mb-5 text-sm tracking-widest"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div><blockquote class="font-mincho text-xl leading-snug">« On entre pour dîner, on ressort transformé. Mei nous a fait découvrir un saké qui change la vie. »</blockquote><figcaption class="mt-6 text-xs tracking-[0.2em] uppercase text-washi/70">Julien M. — Croix-Rousse</figcaption></figure>
+<figure class="quote reveal bg-sumi/60 backdrop-blur p-8 md:mt-20"><div class="text-kin mb-5 text-sm tracking-widest"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div><blockquote class="font-mincho text-xl leading-snug">« Une adresse rare : élégante sans être guindée, précise sans être froide. À réserver longtemps à l'avance. »</blockquote><figcaption class="mt-6 text-xs tracking-[0.2em] uppercase text-washi/70">Le Petit Futé Lyon</figcaption></figure>
+</div>
+</div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation" class="relative bg-sumi py-28 md:py-44 px-5 md:px-10 overflow-hidden">
+<style>
+.field{background:transparent;border:0;border-bottom:1px solid rgba(241,235,223,.3);padding:.9rem 0;width:100%;color:#f1ebdf;font-size:1.05rem;outline:none;transition:border-color .4s,padding .4s}
+.field:focus{border-color:#d7261e;padding-left:.6rem}
+.field option{background:#171413;color:#f1ebdf}
+.lab{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(241,235,223,.6)}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.08);opacity:1}}
+.pulse{animation:pulse 6s ease-in-out infinite}
+</style>
+<div class="pulse absolute -right-[20vw] top-1/2 -translate-y-1/2 w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] rounded-full bg-aka/25 blur-[100px]"></div>
+<div class="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-24">
+<div>
+<p class="reveal text-kin text-xs tracking-[0.35em] uppercase mb-6">08 — Réservation</p>
+<h2 class="reveal font-mincho font-extrabold tracking-[-0.04em] leading-[0.88] text-[clamp(3.4rem,10vw,10rem)]">Une place <span class="font-ital italic font-light text-aka">vous attend</span></h2>
+<p class="reveal mt-8 text-washi/70 text-lg max-w-md leading-relaxed">Le comptoir omakase se réserve jusqu'à 30 jours à l'avance. L'izakaya accepte les tables dès 18h30, et garde toujours quelques places au bar pour les imprévus.</p>
+<div class="reveal mt-10 space-y-3 text-washi/80">
+<p><i class="fa-solid fa-phone text-aka w-6"></i> <a href="tel:+33478000000" class="ulink">04 78 00 00 00</a></p>
+<p><i class="fa-solid fa-envelope text-aka w-6"></i> <a href="mailto:table@hoshi-lyon.fr" class="ulink">table@hoshi-lyon.fr</a></p>
+</div>
+</div>
+<form class="reveal bg-charbon/80 backdrop-blur border border-washi/10 p-7 md:p-10 grid grid-cols-2 gap-x-6 gap-y-7" onsubmit="event.preventDefault();this.querySelector('.ok').classList.remove('hidden');this.querySelector('button').classList.add('opacity-60');">
+<div class="col-span-2"><label class="lab" for="n">Nom</label><input id="n" class="field" type="text" placeholder="Votre nom" required></div>
+<div><label class="lab" for="d">Date</label><input id="d" class="field" type="date" required></div>
+<div><label class="lab" for="p">Convives</label><select id="p" class="field"><option>2 personnes</option><option>1 personne</option><option>3 personnes</option><option>4 personnes</option><option>5 à 8 personnes</option></select></div>
+<div class="col-span-2"><label class="lab" for="s">Service</label><select id="s" class="field"><option>Omakase — 19h00</option><option>Omakase — 21h30</option><option>Izakaya — 19h00</option><option>Izakaya — 21h00</option></select></div>
+<div class="col-span-2"><label class="lab" for="e">E-mail</label><input id="e" class="field" type="email" placeholder="vous@exemple.fr" required></div>
+<div class="col-span-2">
+<button type="submit" class="group w-full relative overflow-hidden bg-aka text-washi py-4 rounded-full text-sm tracking-[0.25em] uppercase hover:shadow-[0_10px_50px_-8px_rgba(215,38,30,.8)] transition-all duration-500"><span class="relative z-10">Confirmer ma demande</span><span class="absolute inset-0 bg-kin translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></span></button>
+<p class="ok hidden mt-4 text-kin font-ital italic text-lg">Merci — nous revenons vers vous sous 24 h. ありがとう</p>
+</div>
+</form>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-washi text-sumi px-5 md:px-10 pt-20 pb-8 overflow-hidden relative">
+<div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 pb-16">
+<div class="md:col-span-2">
+<p class="font-mincho font-extrabold text-4xl tracking-tight">星 Hōshi</p>
+<p class="mt-4 max-w-sm text-sumi/70 leading-relaxed">Restaurant japonais, omakase & izakaya. Cuisine de feu, de lame et de patience, au cœur de la Croix-Rousse.</p>
+<div class="flex gap-3 mt-6">
+<a href="#" aria-label="Instagram" class="w-11 h-11 rounded-full border border-sumi/30 flex items-center justify-center hover:bg-aka hover:text-washi hover:border-aka hover:-translate-y-1 transition-all duration-500"><i class="fa-brands fa-instagram"></i></a>
+<a href="#" aria-label="Facebook" class="w-11 h-11 rounded-full border border-sumi/30 flex items-center justify-center hover:bg-aka hover:text-washi hover:border-aka hover:-translate-y-1 transition-all duration-500"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#" aria-label="TikTok" class="w-11 h-11 rounded-full border border-sumi/30 flex items-center justify-center hover:bg-aka hover:text-washi hover:border-aka hover:-translate-y-1 transition-all duration-500"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+</div>
+<div>
+<p class="text-xs tracking-[0.3em] uppercase text-aka mb-5">Adresse</p>
+<p class="leading-relaxed">12 rue Imbert-Colomès<br>69001 Lyon<br><span class="text-sumi/60 text-sm">Métro Croix-Paquet (C)</span></p>
+</div>
+<div>
+<p class="text-xs tracking-[0.3em] uppercase text-aka mb-5">Horaires</p>
+<ul class="leading-relaxed space-y-1"><li>Mar – Jeu · 19h – 23h</li><li>Ven – Sam · 19h – 00h</li><li>Dim · 12h – 15h</li><li class="text-sumi/60">Fermé le lundi</li></ul>
+</div>
+</div>
+<div class="font-mincho font-extrabold text-[22vw] leading-[0.75] tracking-[-0.05em] text-sumi/[0.06] text-center select-none -mb-4">星 HŌSHI</div>
+<div class="max-w-7xl mx-auto border-t border-sumi/15 pt-6 mt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-sumi/60 tracking-wide">
+<p>© 2026 Hōshi — Tous droits réservés.</p>
+<p><a href="#top" class="ulink">Mentions légales</a> · <a href="#top" class="ulink">Confidentialité</a> · <a href="#top" class="ulink">Retour en haut ↑</a></p>
+</div>
+</footer>
+
+</body>
+</html>
